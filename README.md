@@ -104,7 +104,7 @@ Welcome to the Gringotts-Owl-Post, the magical financial platform for wizards an
 5.  Run the Flask application:
 
     ```bash
-    python app/routes.py
+    python main.py
     ```
 
 6. Open your web browser and go to `http://127.0.0.1:5000/`.
@@ -129,7 +129,7 @@ venv/
 __pycache__/
 *.pyc
 *.log
-5. app/routes.py (Example Basic Structure):
+5. main.py (Example Basic Structure):
 
 Python
 

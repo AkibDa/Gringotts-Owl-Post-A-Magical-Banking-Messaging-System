@@ -1,14 +1,6 @@
 # Gringotts-Owl-Post-A-Magical-Banking-Messaging-System
 Gringotts-Owl-Post/
-├── app/
-│   ├── __init__.py
-│   ├── routes.py        # Flask API routes
-│   ├── auth.py          # Authentication logic
-│   ├── currency.py      # Currency conversion logic
-│   ├── transfer.py      # Owl post transfer logic
-│   ├── vault.py         # Gringotts vault logic
-│   ├── security.py      # Security-related functions
-│   └── utils.py         # Utility functions
+├── main/
 ├── static/
 │   ├── css/
 │   │   └── style.css

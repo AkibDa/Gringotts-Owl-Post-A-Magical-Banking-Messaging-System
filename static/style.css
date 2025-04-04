@@ -10,12 +10,11 @@
 }
 
 body {
-  background-color: var(--dark-blue);
-  color: var(--light-text);
-  font-family: 'Cinzel Decorative', 'Times New Roman', serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1e1b4b, #000000);
+  color: #fce473;
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+  padding: 2rem;
 }
 
 :root {
@@ -34,6 +33,67 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px gold;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid gold;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 0 15px #fce473;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #fce473;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #fce473;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+.history {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.history p {
+  margin: 5px 0;
+  color: #eee;
+}
+
 
 .welcome-container {
   display: flex;

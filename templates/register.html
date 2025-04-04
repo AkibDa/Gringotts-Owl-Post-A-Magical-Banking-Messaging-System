@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gringotts Owl Post - Register</title>
+    <link rel="icon" href="/static/gringotts.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="gringotts-logo">
+            <img src="/static/gringotts.png" alt="Gringotts Logo" style="height: 450px;">
+        </div>
+        
+        <div class="auth-box">
+            <h2>Open Your Vault</h2>
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+            <form method="POST">
+                <input type="text" name="username" placeholder="Choose Wizard ID" required>
+                <input type="password" name="password" placeholder="Create Secret Password" required>
+                <select name="house" required>
+                    <option value="">Select Your House</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                </select>
+                <button type="submit">Create Vault</button>
+            </form>
+            <p>Already have a vault? <a href="{{ url_for('login') }}">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>

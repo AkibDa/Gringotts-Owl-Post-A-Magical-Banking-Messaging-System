@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringotts Owl Post - Banking</title>
+    <link rel="icon" href="/static/gringotts.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="bank-container">
+        <header class="header">
+            <div class="gringotts-logo">
+                <img src="/static/gringotts-logo.png" alt="Gringotts Logo" style="height: 80px;">
+            </div>
+            <div class="user-info">
+                <span><i class="fas fa-user"></i> {{ username }}</span>
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </header>
+        
+        <div class="feature-card">
+            <h2><i class="fas fa-exchange-alt"></i> Currency Converter</h2>
+            <div class="converter-box">
+                <div class="input-group">
+                    <input type="number" id="muggle-amount" placeholder="Amount in INR">
+                    <button onclick="convertCurrency()"><i class="fas fa-magic">Convert </i></button>
+                </div>
+                <div id="wizard-result" class="result-box"></div>
+            </div>
+        </div>
+        
+        <div class="feature-card">
+          <h2><i class="fas fa-owl"></i> Owl Post Messaging</h2>
+          <form id="owl-form">
+              <div class="form-row">
+                  <input type="text" id="recipient" placeholder="Recipient's Wizard ID" required>
+              </div>
+              <div class="form-row amount-inputs">
+                  <div class="amount-input">
+                      <label for="galleons">Galleons</label>
+                      <input type="number" id="galleons" placeholder="0" min="0" value="0">
+                  </div>
+                  <div class="amount-input">
+                      <label for="sickles">Sickles</label>
+                      <input type="number" id="sickles" placeholder="0" min="0" value="0">
+                  </div>
+                  <div class="amount-input">
+                      <label for="knuts">Knuts</label>
+                      <input type="number" id="knuts" placeholder="0" min="0" value="0">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <textarea id="owl-message" placeholder="Your magical message... (optional)"></textarea>
+              </div>
+              <div class="form-row">
+                  <input type="text" id="spell-verify" placeholder="Cast a verification spell (alohomora, expelliarmus, etc.)" required>
+              </div>
+              <button type="button" onclick="sendOwl()" id="send-owl-button">
+                  <i class="fas fa-paper-plane"></i> Send Owl Transfer
+              </button>
+          </form>
+          <div id="owl-animation"></div>
+      </div>
+        
+        <div class="feature-card">
+            <h2><i class="fas fa-vault"></i> Your Gringotts Vault</h2>
+            <div id="vault-display">
+                <div class="vault-door">
+                    <div class="vault-wheel"></div>
+                </div>
+                <div id="vault-balance" class="balance-display"></div>
+            </div>
+            <button onclick="checkVault()" id="access-vault-button"">
+                <i class="fas fa-key"></i> Access Vault
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script>
+      document.getElementById('convert-btn').addEventListener('click', convertCurrency);
+    </script>
+</body>
+</html>
